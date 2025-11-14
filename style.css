@@ -1,4 +1,4 @@
-@import url(css/reset.css);
+@import url(ClassGo/css/reset.css);
 @import url(css/basic.css);
 @import url(css/variables.css);
 @import url(css/header.css);
@@ -6,6 +6,7 @@
 @import url(css/blog.css);
 @import url(css/news.css);
 @import url(css/footer.css);
+
 
 
 
