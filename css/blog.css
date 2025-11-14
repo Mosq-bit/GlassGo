@@ -54,7 +54,7 @@
   gap: 18px;
 }
 
-/* Маленькие карточки */
+
 .blog__card {
   width: 314px;
   flex-shrink: 0;
@@ -113,7 +113,7 @@
   -webkit-box-orient: vertical;
 }
 
-/* Большая карточка */
+
 .blog__card-big {
   width: 600px;
   height: 455px;
@@ -145,7 +145,7 @@
   font-size: 18px;
 }
 
-/* Адаптив для мобильных (375px) */
+
 @media (max-width: 767px) {
   .blog__header {
     flex-direction: column;
@@ -154,7 +154,7 @@
   }
   
   .blog__header .blog__header-link {
-    display: none; /* Скрываем кнопку в хедере */
+    display: none;
   }
   .blog-post__excerpt{
     display: none;
@@ -171,17 +171,17 @@
   }
   
   .blog__cards {
-    flex-direction: row; /* Горизонтальное расположение маленьких карточек */
+    flex-direction: row; 
     gap: 15px;
-    order: 1; /* Маленькие карточки сверху */
-    overflow-x: auto; /* Добавляем горизонтальный скролл если не помещаются */
+    order: 1;
+    overflow-x: auto;
     padding-bottom: 10px;
   }
   
   .blog__card {
-    width: 280px; /* Фиксированная ширина для горизонтального скролла */
+    width: 280px;
     flex-shrink: 0;
-    min-width: 280px; /* Минимальная ширина */
+    min-width: 280px;
   }
   
   .blog__card img {
@@ -194,7 +194,7 @@
   
   .blog-post__excerpt {
     font-size: 14px;
-    -webkit-line-clamp: 2; /* Уменьшаем количество строк */
+    -webkit-line-clamp: 2; 
   }
   
   .blog__card-big {
@@ -202,7 +202,7 @@
     height: auto;
     min-height: 250px;
     padding: 20px;
-    order: 2; /* Большая карточка посередине */
+    order: 2; 
   }
   
   .blog__card-big_title {
@@ -215,7 +215,7 @@
     font-size: 14px;
   }
   
-  /* Кнопка внизу по центру */
+
   .blog__header-link-mobile {
     display: flex;
     align-items: center;
@@ -230,26 +230,26 @@
     text-decoration: none;
     margin: 30px auto 0;
     max-width: 200px;
-    order: 3; /* Кнопка снизу */
+    order: 3; 
   }
 }
 
-/* Альтернативный вариант - грид для маленьких карточек */
+
 @media (max-width: 767px) {
   .blog__cards {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
+    grid-template-columns: 1fr 1fr; 
     gap: 15px;
-    overflow-x: visible; /* Убираем скролл */
+    overflow-x: visible;
   }
   
   .blog__card {
-    width: 100%; /* Занимают всю доступную ширину */
+    width: 100%; 
     min-width: auto;
   }
 }
 
-/* Скрываем мобильную кнопку на десктопе */
+
 .blog__header-link-mobile {
   display: none;
 }
@@ -260,7 +260,7 @@
   }
 }
 
-/* Десктоп версия (1440px+) */
+
 @media (min-width: 1440px) {
   .blog__inner {
     gap: 30px;
@@ -277,4 +277,5 @@
   .blog__card-big {
     width: 650px;
   }
+
 }
