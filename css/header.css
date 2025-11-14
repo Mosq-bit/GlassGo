@@ -242,7 +242,7 @@
     }
 
     .burger-menu.active .burger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        transform: rotate(-38deg) translate(3px, -3px);
     }
 }
 
@@ -271,4 +271,5 @@
     .header__social {
         display: flex;
     }
+
 }
