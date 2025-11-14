@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: "Arial", sans-serif;
+  src: url(/fonts/arial_bolditalicmt.ttf);
+}
+@font-face {
+  font-family: "AA Bebas Neue", sans-serif;
+  src: url(/fonts/aa_bebasneue.ttf);
+}
+@font-face {
+  font-family: "Futura PT", sans-serif;
+  src: url(/fonts/FuturaCyrillicLight.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--grey);
+}
+
+.container {
+  max-width: 1324px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+ 
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 55px;
+  letter-spacing: 0.02em;
+  color: #304352;
+}

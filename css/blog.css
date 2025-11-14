@@ -1,0 +1,280 @@
+.blog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog__title {
+  font-family: var(--second-family);
+  font-size: 32px;
+  margin: 0;
+}
+
+.blog__header-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: 5px 13px;
+  font-family: var(--third-family);
+  font-size: 16px;
+  color: var(--grey);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.blog__header-link:hover {
+  background: var(--grey);
+  color: var(--white);
+}
+
+.blog__header-link img {
+  width: 10px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.blog__header-link:hover img {
+  transform: translateX(3px);
+}
+
+.blog__inner {
+  height: 450px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.blog__cards {
+  display: flex;
+  gap: 18px;
+}
+
+/* Маленькие карточки */
+.blog__card {
+  width: 314px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__card a {
+  text-decoration: underline;
+}
+
+.blog__card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.blog__date {
+  margin-top: 21px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.blog-post__date {
+  color: var(--grey);
+}
+
+.blog__link {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.blog-post__title {
+  margin-top: 10px;
+  font-family: var(--second-family);
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--grey);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.blog-post__excerpt {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--grey);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Большая карточка */
+.blog__card-big {
+  width: 600px;
+  height: 455px;
+  padding: 35px 32px 34px;
+  border-radius: 20px;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__card-big .blog__link {
+  color: var(--white);
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.blog__card-big_title {
+  padding: 93px 0 0;
+  color: var(--white);
+  font-family: var(--second-family);
+  font-size: 48px;
+  margin: 0;
+}
+
+.blog-post__date-big {
+  text-align: right;
+  margin-top: 92px;
+  color: var(--white);
+  font-size: 18px;
+}
+
+/* Адаптив для мобильных (375px) */
+@media (max-width: 767px) {
+  .blog__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .blog__header .blog__header-link {
+    display: none; /* Скрываем кнопку в хедере */
+  }
+  .blog-post__excerpt{
+    display: none;
+  }
+  .blog__title {
+    font-size: 24px;
+  }
+  
+  .blog__inner {
+    height: auto;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .blog__cards {
+    flex-direction: row; /* Горизонтальное расположение маленьких карточек */
+    gap: 15px;
+    order: 1; /* Маленькие карточки сверху */
+    overflow-x: auto; /* Добавляем горизонтальный скролл если не помещаются */
+    padding-bottom: 10px;
+  }
+  
+  .blog__card {
+    width: 280px; /* Фиксированная ширина для горизонтального скролла */
+    flex-shrink: 0;
+    min-width: 280px; /* Минимальная ширина */
+  }
+  
+  .blog__card img {
+    height: 160px;
+  }
+  
+  .blog-post__title {
+    font-size: 18px;
+  }
+  
+  .blog-post__excerpt {
+    font-size: 14px;
+    -webkit-line-clamp: 2; /* Уменьшаем количество строк */
+  }
+  
+  .blog__card-big {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    padding: 20px;
+    order: 2; /* Большая карточка посередине */
+  }
+  
+  .blog__card-big_title {
+    font-size: 20px;
+    padding: 20px 0 0;
+  }
+  
+  .blog-post__date-big {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  
+  /* Кнопка внизу по центру */
+  .blog__header-link-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-family: var(--third-family);
+    font-size: 16px;
+    color: var(--grey);
+    text-decoration: none;
+    margin: 30px auto 0;
+    max-width: 200px;
+    order: 3; /* Кнопка снизу */
+  }
+}
+
+/* Альтернативный вариант - грид для маленьких карточек */
+@media (max-width: 767px) {
+  .blog__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
+    gap: 15px;
+    overflow-x: visible; /* Убираем скролл */
+  }
+  
+  .blog__card {
+    width: 100%; /* Занимают всю доступную ширину */
+    min-width: auto;
+  }
+}
+
+/* Скрываем мобильную кнопку на десктопе */
+.blog__header-link-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .blog__header-link-mobile {
+    display: flex;
+  }
+}
+
+/* Десктоп версия (1440px+) */
+@media (min-width: 1440px) {
+  .blog__inner {
+    gap: 30px;
+  }
+  
+  .blog__cards {
+    gap: 30px;
+  }
+  
+  .blog__card {
+    width: 350px;
+  }
+  
+  .blog__card-big {
+    width: 650px;
+  }
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>GlassGo</title>
+  </head>
+  <body>
+    <header class="header__section">
+      <div class="container">
+        <div class="header__nav">
+          <a href="#" class="header__logo-link">
+            <img src="/images/logo.png" alt="Логотип">
+          </a>
+
+          <!-- Бургер меню -->
+          <button class="burger-menu" aria-label="Открыть меню"
+            aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+
+          <nav class="header__nav-menu">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a href="#"
+                  class="header__nav-link">Компания</a></li>
+              <li class="header__nav-item"><a href="#"
+                  class="header__nav-link">Продукты</a></li>
+              <li class="header__nav-item"><a href="#"
+                  class="header__nav-link">Карьера</a></li>
+              <li class="header__nav-item"><a href="#"
+                  class="header__nav-link">Медиа</a></li>
+              <li class="header__nav-item"><a href="#"
+                  class="header__nav-link">Контакты</a></li>
+            </ul>
+
+            <div class="header__social-mobile">
+              <a href="#" class="header__social-link" aria-label="Telegram">
+                <img src="/images/telegram_icon.png" alt="Telegram"
+                  class="header__social-pic">
+              </a>
+              <a href="#" class="header__social-link" aria-label="Zen">
+                <img src="/images/Zen_logo_icon.png" alt="Zen"
+                  class="header__social-pic">
+              </a>
+              <a href="#" class="header__social-link" aria-label="VK">
+                <img src="/images/VK Logo.png" alt="VK"
+                  class="header__social-pic">
+              </a>
+            </div>
+          </nav>
+
+          <form role="search" class="search-form">
+            <label for="search-input" class="visually-hidden">Поиск</label>
+            <div class="search-container">
+              <input
+                type="search"
+                id="search-input"
+                name="q"
+                class="search-input"
+                placeholder="Поиск"
+                aria-label="Поиск по сайту" />
+              <button type="submit" class="search-button"
+                aria-label="Выполнить поиск">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path
+                    d="M11 19.7917C15.4183 19.7917 19 16.0607 19 11.4583C19 6.85596 15.4183 3.125 11 3.125C6.58172 3.125 3 6.85596 3 11.4583C3 16.0607 6.58172 19.7917 11 19.7917Z"
+                    stroke="#304352" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M21.0004 21.875L16.6504 17.3438" stroke="#304352"
+                    stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="header__social">
+            <a href="#" class="header__social-link" aria-label="Telegram">
+              <img src="/images/telegram_icon.png" alt="Telegram"
+                class="header__social-pic">
+            </a>
+            <a href="#" class="header__social-link" aria-label="Zen">
+              <img src="/images/Zen_logo_icon.png" alt="Zen"
+                class="header__social-pic">
+            </a>
+            <a href="#" class="header__social-link" aria-label="VK">
+              <img src="/images/VK Logo.png" alt="VK"
+                class="header__social-pic">
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog__section">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a>
+              </li>
+              <li class="breadcrumbs__item" aria-current="page">
+                <span class="breadcrumbs__current">Блог и новости</span>
+              </li>
+            </ol>
+          </nav>
+
+          <div class="blog__header">
+            <h2 class="blog__title title">Блог</h2>
+            <a href="#" class="blog__header-link">
+              Смотреть все
+              <img src="/images/arrow.png" alt>
+            </a>
+          </div>
+
+          <div class="blog__inner">
+            <div class="blog__cards">
+              <div class="blog__card">
+                <img src="/images/1.png"
+                  alt="Жизнь в мире тишины: проблемы и вызовы слабослышащих людей">
+                <div class="blog__date">
+                  <time class="blog-post__date"
+                    datetime="2024-02-27">27.02.24</time>
+                  <a href="#" class="blog__link">dzen.ru</a>
+                </div>
+                <h3 class="blog-post__title">ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И
+                  ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ</h3>
+                <p class="blog-post__excerpt">Рассмотрим более подробно, с
+                  какими именно проблемами они сталкиваются и как общество может
+                  помочь в их преодолении.</p>
+              </div>
+
+              <div class="blog__card">
+                <img src="/images/1.png"
+                  alt="Жизнь в мире тишины: проблемы и вызовы слабослышащих людей">
+                <div class="blog__date">
+                  <time class="blog-post__date"
+                    datetime="2024-02-27">27.02.24</time>
+                  <a href="#" class="blog__link">vk.ru</a>
+                </div>
+                <h3 class="blog-post__title">ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И
+                  ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ</h3>
+                <p class="blog-post__excerpt">Рассмотрим более подробно, с
+                  какими именно проблемами они сталкиваются и как общество может
+                  помочь в их преодолении.</p>
+              </div>
+            </div>
+
+            <div class="blog__card-big">
+              <a href="#" class="blog__link">dzen.ru</a>
+              <h2 class="blog__card-big_title">Жизнь в мире тишины: Проблемы и
+                вызовы слабослышащих людей</h2>
+              <time class="blog-post__date-big" datetime="2024-02-27">27 февраля
+                24</time>
+            </div>
+          </div>
+          <a href="#" class="blog__header-link blog__header-link-mobile">
+            Смотреть все
+            <img src="/images/arrow.png" alt>
+          </a>
+        </div>
+      </section>
+
+      <section class="news__section">
+        <div class="container">
+
+          <div class="blog__header news__header">
+            <h2 class="news__title title">Новости</h2>
+            <a href="#" class="blog__header-link  ">
+              Смотреть все
+              <img src="/images/arrow.png" alt>
+            </a>
+          </div>
+
+          <div class=" news__inner">
+            <div class="news__cards">
+
+              <div class="news__card-big news__card-big">
+                <a href="#" class="news__link">dzen.ru</a>
+                <h2 class="news__card-big_title">Жизнь в мире тишины: Проблемы и
+                  вызовы слабослышащих людей</h2>
+                <time class="news-post__date-big" datetime="2024-02-27">27
+                  февраля
+                  24</time>
+              </div>
+
+              <div class="news__card-small">
+                <div class="news__card">
+                  <img src="/images/1.png"
+                    alt="Жизнь в мире тишины: проблемы и вызовы слабослышащих людей">
+                  <div class="news__date">
+                    <time class="news-post__date"
+                      datetime="2024-02-27">27.02.24</time>
+                    <a href="#" class="news__link">dzen.ru</a>
+                  </div>
+                  <h3 class="news-post__title">ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И
+                    ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ</h3>
+                  <p class="news-post__excerpt">Рассмотрим более подробно, с
+                    какими именно проблемами они сталкиваются и как общество
+                    может
+                    помочь в их преодолении.</p>
+                </div>
+
+                <div class="news__card">
+                  <img src="/images/1.png"
+                    alt="Жизнь в мире тишины: проблемы и вызовы слабослышащих людей">
+                  <div class="news__date">
+                    <time class="news-post__date"
+                      datetime="2024-02-27">27.02.24</time>
+                    <a href="#" class="news__link">vk.ru</a>
+                  </div>
+                  <h3 class="news-post__title">ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И
+                    ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ</h3>
+                  <p class="news-post__excerpt">Рассмотрим более подробно, с
+                    какими именно проблемами они сталкиваются и как общество
+                    может
+                    помочь в их преодолении.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="blog__header-link blog__header-link-mobile">
+            Смотреть все
+            <img src="/images/arrow.png" alt>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer__section">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="#" class="footer__logo-link">
+            <img src="/images/footer_logo.png" alt>
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item-title"></li>
+            </ul>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item-title"></li>
+            </ul>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item-title"></li>
+            </ul>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item-title"></li>
+            </ul>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item-title"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
