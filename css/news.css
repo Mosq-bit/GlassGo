@@ -56,11 +56,15 @@
 .news__cards {
   display: flex;
   gap: 18px;
+  flex: 1;
 }
-.news__card-small{
-    display: flex;
-    gap: 18px;
+
+.news__card-small {
+  display: flex;
+  gap: 18px;
+  flex: 1;
 }
+
 .news__card {
   width: 314px;
   flex-shrink: 0;
@@ -153,7 +157,7 @@
   font-size: 18px;
 }
 
-/* Адаптив для мобильных (375px) */
+
 @media (max-width: 767px) {
   .news__section {
     margin: 60px 0;
@@ -181,29 +185,34 @@
     height: auto;
     margin-top: 25px;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
   
-  /* Маленькие карточки - горизонтально рядом */
+
   .news__cards {
-    flex-direction: row;
-    gap: 12px;
-    order: 1;
-    overflow-x: auto;
-    padding-bottom: 8px;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
     max-width: 375px;
     margin: 0 auto;
   }
   
-  .news__card {
-    width: 170px; /* Уменьшаем ширину для двух карточек в 375px */
-    flex-shrink: 0;
-    min-width: 170px;
+ 
+  .news__card-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    order: 1; 
+    width: 100%;
+  }
+  
+  .news__card-small .news__card {
+    width: 100%;
+    min-width: auto;
   }
   
   .news__card img {
-    height: 100px; /* Уменьшаем высоту изображения */
+    height: 120px;
   }
   
   .news__date {
@@ -212,19 +221,19 @@
   }
   
   .news-post__title {
-    font-size: 13px;
-    margin-top: 6px;
+    font-size: 14px;
+    margin-top: 8px;
     -webkit-line-clamp: 2;
     line-height: 1.2;
   }
   
-  /* Большая карточка */
+
   .news__card-big {
     width: 100%;
     max-width: 375px;
     height: auto;
-    min-height: 180px;
-    padding: 15px;
+    min-height: 200px;
+    padding: 20px;
     order: 2;
     margin: 0 auto;
   }
@@ -234,17 +243,17 @@
   }
   
   .news__card-big_title {
-    font-size: 16px;
-    padding: 20px 0 0;
+    font-size: 18px;
+    padding: 30px 0 0;
     line-height: 1.2;
   }
   
   .news-post__date-big {
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 25px;
+    font-size: 14px;
   }
   
-  /* Кнопка внизу по центру */
+
   .news__header-link-mobile {
     display: flex;
     align-items: center;
@@ -268,27 +277,23 @@
   }
 }
 
-/* Дополнительные стили для очень маленьких экранов */
-@media (max-width: 400px) {
-  .news__cards {
-    gap: 10px;
+
+@media (max-width: 767px) {
+  .news__card-small {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
   }
   
-  .news__card {
-    width: 165px;
-    min-width: 165px;
-  }
-  
-  .news__card img {
-    height: 90px;
-  }
-  
-  .news-post__title {
-    font-size: 12px;
+  .news__card-small .news__card {
+    width: 170px;
+    flex-shrink: 0;
+    min-width: 170px;
   }
 }
 
-/* Скрываем мобильную кнопку на десктопе */
+
 .news__header-link-mobile {
   display: none;
 }
@@ -299,7 +304,7 @@
   }
 }
 
-/* Десктоп версия (1440px+) */
+
 @media (min-width: 1440px) {
   .news__inner {
     gap: 30px;
