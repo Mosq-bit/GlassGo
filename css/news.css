@@ -282,6 +282,7 @@
   .news__card-small {
     display: flex;
     gap: 12px;
+  
     padding-bottom: 8px;
   }
   
@@ -325,4 +326,3 @@
     font-size: 36px;
   }
 }
-
