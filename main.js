@@ -29,4 +29,49 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
     });
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    const mediaQuery = window.matchMedia('(max-width: 375px)');
+    
+    function initAccordion() {
+        if (mediaQuery.matches) {
+
+            accordionHeaders.forEach(header => {
+
+                header.classList.remove('active');
+                header.nextElementSibling.classList.remove('active');
+                
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const isActive = this.classList.contains('active');
+
+                    accordionHeaders.forEach(otherHeader => {
+                        otherHeader.classList.remove('active');
+                        otherHeader.nextElementSibling.classList.remove('active');
+                    });
+
+                    if (!isActive) {
+                        this.classList.add('active');
+                        content.classList.add('active');
+                    }
+                });
+            });
+        } else {
+            
+            accordionHeaders.forEach(header => {
+                header.classList.remove('active');
+                header.nextElementSibling.style.maxHeight = 'none';
+                header.nextElementSibling.style.overflow = 'visible';
+                header.nextElementSibling.classList.add('active');
+            });
+        }
+    }
+    
+ 
+    initAccordion();
+
+    mediaQuery.addEventListener('change', initAccordion);
 });
